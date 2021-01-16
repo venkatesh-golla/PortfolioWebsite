@@ -10,156 +10,208 @@
     <link href='css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <section id="home">
-        <nav>
-            <!-- <a href="#" class="logo">Venkatesh Golla</a> -->
-            <ul class="menu">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#aboutMe">About</a></li>
-                <li><a href="#technologiesAndSkills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="toggle"></div>
-        </nav>
-        <div class="homeText">
-            <p>Hello</p>
-            <h1>I'm <span class="name">Venkatesh Golla</span> </h1>
-            <p class="details">I am a Web Application Developer searching for oppurtunities</p>
-            <div class="network">
-                <a href="https://github.com/venkatesh-golla" target="blank"><i class="fab fa-github-square"></i></a>
-                <a href="https://www.linkedin.com/in/venkateshgolla/" target="blank"><i class="fab fa-linkedin"></i></a>
+    <div id="parent">
+        <section id="home" onmouseover="mouseOnHome(this)">
+            <nav>
+                <!-- <a href="#" class="logo">Venkatesh Golla</a> -->
+                <ul class="menu">
+                    <li class="active" id="homeMenu"><a href="#home">Home</a></li>
+                    <li id="aboutMenu"><a href="#aboutMe">About</a></li>
+                    <li id="technologiesMenu"><a href="#technologiesAndSkills">Skills</a></li>
+                    <li id="projectMenu"><a href="#projects">Projects</a></li>
+                    <li id="contactMenu"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="toggle"></div>
+            </nav>
+            <div class="homeText">
+                <p>Welcome To My Portfolio Website</p>
+                <h1>I'm <span class="name">Venkatesh Golla</span> </h1>
+                <p class="details">I am a Web Application Developer looking for oppurtunities</p>
+                <div class="network">
+                    <a href="https://github.com/venkatesh-golla" target="blank"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/venkateshgolla/" target="blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <!-- <a href="#" class="resume-btn">Download Cv</a> -->
-        </div>
 
 
-    </section>
-    <section id="aboutMe">
-        <div class="aboutMeContent">
-            <h1>About Me</h1>
-            <h2>Web Application Developer</h2>
-            <p>I am a Web Application Developer with Bachelor’s degree in Information Technology and Post graduate
-                certificates in Computer Application Development & Computer Application Security. I love to develop web
-                applications using various technologies and solve real world problems. I am interested in the concept of
-                secure coding.</p>
-            <p>I have developed some projects using .NET Technology MVC, APIs and Razor Pages as well.</p>
-            <p> Alongside my career, I am a music lover who loves to enjoy listening to music a lot. I can say that I am
-                person on whom you can trust on, as I value the company and the product I work on.</p>
-        </div>
-    </section>
-    <section id="technologiesAndSkills">
-        <div class="technologiesAndSkillsContent">
-            <h1>Technologies and Skills</h1>
-            <div class="skillsIcons">
-                <i class="colored devicon-html5-plain"></i>
-                <i class="devicon-css3-plain-wordmark colored"></i>
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-dot-net-plain-wordmark colored"></i>
-                <i class="devicon-csharp-plain-wordmark colored"></i>
-                <i class="devicon-mysql-plain-wordmark colored"></i>
-                <i class="devicon-mongodb-plain-wordmark colored"></i>
-                <i class="devicon-nodejs-plain-wordmark colored"></i>
-                <i class="devicon-bootstrap-plain-wordmark colored"></i>
-                <i class="devicon-angularjs-plain-wordmark colored"></i>
-                <i class="devicon-jquery-plain-wordmark colored"></i>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2><br>
-        <div class="projectsContent">
-            <div class="eachProject">
-                <img src="img/moviemvc.png" height="150px" width="280px">
-                <h3>MovieMVC</h3>
-                <p>This project was developed using .NET MVC with MSSQL with all ecommerce functionalities like
-                    authorization, authentication, email verifications, sms notificationspayment services and
-                    appointments</p>
-                <div class="gitpreviewContainer">
-                    <a href="https://github.com/venkatesh-golla/MovieMVC" target="blank"
-                        class="githubButtonwithPreview">Github</a>
-                    <a href="https://moviemvcdev.azurewebsites.net/" target="blank" class="Preview">Live Website</a>
+        </section>
+        <section id="aboutMe" onmouseover="mouseOnAbout(this)">
+            <div class="aboutMeContent">
+                <h1>About Me</h1>
+                <div id="aboutMeParagraph">
+                    <p>I am a Web Application Developer with Bachelor’s degree in Information Technology and Post
+                        graduate
+                        certificates in Computer Application Development & Computer Application Security. I love to
+                        develop web
+                        applications using various technologies and solve real world problems. I am interested in the
+                        concept of
+                        secure coding.</p>
+                    <p>I have developed some projects using .NET Technology MVC, APIs and Razor Pages as well. Also
+                        Developed some projects using Node.js and Angular</p>
+                    <p> Alongside my career, I am a music lover who loves to enjoy listening to music a lot. I can say
+                        that I am
+                        person on whom you can trust on, as I value the company and the product I work on.</p>
                 </div>
 
             </div>
-            <div class="eachProject">
-                <img src="img/taskmanager.png" height="150px" width="300px">
-                <h3>Task Manager API</h3>
-                <p>This API Project was developed using NodeJS and Mongoose with the funcationalities like user
-                    authentication, authorization using authentication tokens, email confirmations and tests using
-                    supertest </p>
-                <div class="gitpreviewContainer">
-                    <a href="https://github.com/venkatesh-golla/Task-Manager-API-NodeJS" target="blank"
-                        class="githubButtonwithPreview">Github</a>
-                    <a href="https://venkatesh-task-manager-api.herokuapp.com/" target="blank"
-                        class="Preview">Live API Link</a>
+        </section>
+        <section id="technologiesAndSkills" onmouseover="mouseOnTech(this)">
+            <div class="technologiesAndSkillsContent">
+                <h1>Technologies and Skills</h1>
+                <div class="skillsIcons">
+                    <!-- <div class="tooltip"><i class="colored devicon-html5-plain" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">HTML 5</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-css3-plain-wordmark colored"  title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">CSS 3</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-javascript-plain colored"  title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">JavaScript</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-dot-net-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">Dot NET</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-csharp-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">C Sharp</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-mysql-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">SQL Database</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-mongodb-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">Mongoose Database</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-nodejs-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">NodeJS</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-bootstrap-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">BootStrap</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-angularjs-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">Angular</span> -->
+                    <!-- </div> -->
+                    <!-- <div class="tooltip"><i class="devicon-jquery-plain-wordmark colored" title="Html 5"></i> -->
+                    <!-- <span class="tooltiptext">JQuery</span> -->
+                    <!-- </div> -->
+
+                    <i class="colored devicon-html5-plain"></i>
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-dot-net-plain-wordmark colored"></i>
+                    <i class="devicon-csharp-plain-wordmark colored"></i>
+                    <i class="devicon-mysql-plain-wordmark colored"></i>
+                    <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    <i class="devicon-nodejs-plain-wordmark colored"></i>
+                    <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                    <i class="devicon-angularjs-plain-wordmark colored"></i>
+                    <i class="devicon-jquery-plain-wordmark colored"></i>
+
+                </div>
+            </div>
+        </section>
+        <section id="projects" onmouseover="mouseOnProject(this)">
+            <h2>My Projects</h2><br>
+            <div class="projectsContent">
+                <div class="eachProject">
+                    <img src="img/moviemvc.png" height="150px" width="280px">
+                    <h3>MovieMVC</h3>
+                    <p>This project was developed using .NET MVC with MSSQL with all ecommerce functionalities like
+                        authorization, authentication, email verifications, sms notificationspayment services and
+                        appointments</p>
+                    <div class="gitpreviewContainer">
+                        <a href="https://github.com/venkatesh-golla/MovieMVC" target="blank"
+                            class="githubButtonwithPreview">Github</a>
+                        <a href="https://moviemvcdev.azurewebsites.net/" target="blank" class="Preview">Live Website</a>
+                    </div>
+
+                </div>
+                <div class="eachProject">
+                    <img src="img/taskmanager.png" height="150px" width="300px">
+                    <h3>Task Manager API</h3>
+                    <p>This API Project was developed using NodeJS and Mongoose with the funcationalities like user
+                        authentication, authorization using authentication tokens, email confirmations and tests using
+                        supertest </p>
+                    <div class="gitpreviewContainer">
+                        <a href="https://github.com/venkatesh-golla/Task-Manager-API-NodeJS" target="blank"
+                            class="githubButtonwithPreview">Github</a>
+                        <a href="https://venkatesh-task-manager-api.herokuapp.com/" target="blank" class="Preview">Live
+                            API Link</a>
+                    </div>
+
+                </div>
+                <div class="eachProject">
+                    <img src="img/booklistrazor.png" height="150px" width="300px">
+                    <h3>BookList Razor</h3>
+                    <p>This project was developed using .NET razor pages with CRUD functionalities and Ajax calls</p>
+                    <a href="https://github.com/venkatesh-golla/RazorpagesCRUD" target="blank"
+                        class="githubButtonNoPreview">Github</a>
+                </div>
+                <div class="eachProject">
+                    <img src="img/covid19.png" height="150px" width="300px">
+                    <h3>Covid19 Regional Website</h3>
+                    <p>This project was developed using NodeJs and MSSQL with the functionlaity to scrape covid cases
+                        data
+                        from websites and display them in the website after storing them in our database</p>
+                    <a href="https://github.com/venkatesh-golla/Canada_Covid_Tracker" target="blank"
+                        class="githubButtonNoPreview">Github</a>
+                </div>
+                <div class="eachProject">
+                    <img src="img/weatherApp.png" height="150px" width="300px">
+                    <h3>Weather App</h3>
+                    <p>This project was developed using NodeJs with functionlaity to display weather details related to
+                        the
+                        user's location or any location based on search. Weatherstack and geocoding APIs were used</p>
+                    <a href="https://github.com/venkatesh-golla/node-weather-website" target="blank"
+                        class="githubButtonNoPreview">Github</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" onmouseover="mouseOnContact(this)">
+            <h1>Get In Touch</h1>
+            <div class="contactDivs">
+                <div class="contactItem">
+                    <i class="fas fa-phone-square-alt contactIcon"></i>
+                    <a href="tel:+1-226-899-6245" class="contactMain "><span
+                            class="text-secondary">+1-226-899-6245</span></a>
+                    <p class="contactParagraph">Phone</p>
+                </div>
+
+                <div class="contactItem">
+                    <i class="far fa-envelope contactIcon"></i>
+                    <a href="mailto: gollav23@gmail.com" class="contactMain">gollav23@gmail.com</a>
+                    <p class="contactParagraph">Email</p>
+                </div>
+
+                <div class="contactItem">
+                    <i class="fas fa-map-pin contactIcon"></i>
+                    <a class="contactMain"
+                        href="https://www.google.com/maps/place/367+Holly+St,+Waterloo,+ON+N2L+4G2/43.4844178,-80.5327317,15z/data=!4m5!3m4!1s0x882bf3f1060ec499:0xc6e6dc537349be59!8m2!3d43.4814706!4d-80.5293238"
+                        target="_blank">
+                        View My Location
+                    </a>
+                    <p class="contactParagraph">Address</p>
+                </div>
+
+                <div class="contactItem">
+                    <i class="fab fa-linkedin contactIcon"></i>
+                    <a class="contactMain" href="https://www.linkedin.com/in/venkateshgolla/" target="_blank">View</a>
+                    </a>
+                    <p class="contactParagraph">LinkedIN</p>
                 </div>
 
             </div>
-            <div class="eachProject">
-                <img src="img/booklistrazor.png" height="150px" width="300px">
-                <h3>BookList Razor</h3>
-                <p>This project was developed using .NET razor pages with CRUD functionalities and Ajax calls</p>
-                <a href="https://github.com/venkatesh-golla/RazorpagesCRUD" target="blank"
-                    class="githubButtonNoPreview">Github</a>
-            </div>
-            <div class="eachProject">
-                <img src="img/covid19.png" height="150px" width="300px">
-                <h3>Covid19 Regional Website</h3>
-                <p>This project was developed using NodeJs and MSSQL with the functionlaity to scrape covid cases data
-                    from websites and display them in the website after storing them in our database</p>
-                <a href="https://github.com/venkatesh-golla/Canada_Covid_Tracker" target="blank"
-                    class="githubButtonNoPreview">Github</a>
-            </div>
-            <div class="eachProject">
-                <img src="img/weatherApp.png" height="150px" width="300px">
-                <h3>Weather App</h3>
-                <p>This project was developed using NodeJs with functionlaity to display weather details related to the
-                    user's location or any location based on search. Weatherstack and geocoding APIs were used</p>
-                <a href="https://github.com/venkatesh-golla/node-weather-website" target="blank"
-                    class="githubButtonNoPreview">Github</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h1>Get In Touch</h1>
-        <div class="contactDivs">
-            <div class="contactItem">
-                <i class="fas fa-phone-square-alt contactIcon"></i>
-                <a href="tel:+1-226-899-6245" class="contactMain">+1-226-899-6245</a>
-                <p class="contactParagraph">Phone</p>
-            </div>
-
-            <div class="contactItem">
-                <i class="far fa-envelope contactIcon"></i>
-                <a href="mailto: gollav23@gmail.com" class="contactMain">gollav23@gmail.com</a>
-                <p class="contactParagraph">Email</p>
-            </div>
-
-            <div class="contactItem">
-                <i class="fas fa-map-pin contactIcon"></i>
-                <a class="contactMain" href="https://www.google.com/maps/place/367+Holly+St,+Waterloo,+ON+N2L+4G2/43.4844178,-80.5327317,15z/data=!4m5!3m4!1s0x882bf3f1060ec499:0xc6e6dc537349be59!8m2!3d43.4814706!4d-80.5293238" target="_blank">
-                    View My Location
-                </a>
-                <p class="contactParagraph">Address</p>
-            </div>
-
-            <div class="contactItem">
-                <i class="fab fa-linkedin contactIcon"></i>
-                <a class="contactMain" href="https://www.linkedin.com/in/venkateshgolla/" target="_blank">View</a> 
-                </a>
-                <p class="contactParagraph">LinkedIN</p>
-            </div>
-
-        </div>
 
 
-    </section>
+        </section>
+    </div>
     <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
 
         /*Responsive Navigation*/
@@ -168,7 +220,9 @@
                 $('.toggle').toggleClass('active')
                 $('nav ul').toggleClass('active-menu')
             })
+
         });
+
 
     </script>
 </body>
